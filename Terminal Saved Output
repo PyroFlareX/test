@@ -1,0 +1,237 @@
+Last login: Sat Dec  2 07:53:17 on console
+Christines-iMac-2:~ ckurlawalla$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Christines-iMac-2:~ ckurlawalla$ ls
+Applications			Music
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Library				iCloud Drive (Archive)
+Movies				iCloud Drive (Archive) - 1
+Christines-iMac-2:~ ckurlawalla$ cd DEsktop
+Christines-iMac-2:DEsktop ckurlawalla$ cd Desktop/
+-bash: cd: Desktop/: No such file or directory
+Christines-iMac-2:DEsktop ckurlawalla$ cd Desktop
+-bash: cd: Desktop: No such file or directory
+Christines-iMac-2:DEsktop ckurlawalla$ ls
+DigitalFilm
+Christines-iMac-2:DEsktop ckurlawalla$ cd ..
+Christines-iMac-2:~ ckurlawalla$ cd Desktop/
+Christines-iMac-2:Desktop ckurlawalla$ git clone https://github.com/joshkmartinez/test.git
+Cloning into 'test'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Christines-iMac-2:Desktop ckurlawalla$ ls
+DigitalFilm	test
+Christines-iMac-2:Desktop ckurlawalla$ cd test
+Christines-iMac-2:test ckurlawalla$ ls
+README.md
+Christines-iMac-2:test ckurlawalla$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Christines-iMac-2:test ckurlawalla$ git add .
+Christines-iMac-2:test ckurlawalla$ git commit -m"changed readme file"
+[master 2f277be] changed readme file
+ Committer: Christine Kurlawalla <ckurlawalla@Christines-iMac-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Christines-iMac-2:test ckurlawalla$ git push
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joshkmartinez/test.git
+   910d5c5..2f277be  master -> master
+Christines-iMac-2:test ckurlawalla$ ls
+README.md
+Christines-iMac-2:test ckurlawalla$ cd ..
+Christines-iMac-2:Desktop ckurlawalla$ git clone https://github.com/joshkmartinez/utftufugfuguygfuy.git
+Cloning into 'utftufugfuguygfuy'...
+warning: You appear to have cloned an empty repository.
+Christines-iMac-2:Desktop ckurlawalla$ cd utftufugfuguygfuy/
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ ls
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ ls
+test
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ git commit -m"tdhjvjhvjh"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+
+nothing added to commit but untracked files present
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ git push
+error: src refspec refs/heads/master does not match any.
+error: failed to push some refs to 'https://github.com/joshkmartinez/utftufugfuguygfuy.git'
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ git add .
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ git commit -m"tdhjvjhvjh"
+[master (root-commit) a6c4dbc] tdhjvjhvjh
+ Committer: Christine Kurlawalla <ckurlawalla@Christines-iMac-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 487 bytes | 487.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joshkmartinez/utftufugfuguygfuy.git
+ * [new branch]      master -> master
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ ls
+test
+Christines-iMac-2:utftufugfuguygfuy ckurlawalla$ cd ..
+Christines-iMac-2:Desktop ckurlawalla$ ls
+DigitalFilm		test			utftufugfuguygfuy
+Christines-iMac-2:Desktop ckurlawalla$ git clone https://github.com/joshkmartinez/pro.git
+Cloning into 'pro'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Christines-iMac-2:Desktop ckurlawalla$ git add .
+fatal: Not a git repository (or any of the parent directories): .git
+Christines-iMac-2:Desktop ckurlawalla$ cd pro
+Christines-iMac-2:pro ckurlawalla$ ls
+README.md	Untitled-1	ytcuj
+Christines-iMac-2:pro ckurlawalla$ git add .
+Christines-iMac-2:pro ckurlawalla$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .DS_Store
+	new file:   Untitled-1
+
+Christines-iMac-2:pro ckurlawalla$ git commit -m"added stuff"
+[master d76b836] added stuff
+ Committer: Christine Kurlawalla <ckurlawalla@Christines-iMac-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Untitled-1
+Christines-iMac-2:pro ckurlawalla$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 794 bytes | 794.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/joshkmartinez/pro.git
+   e456378..d76b836  master -> master
+Christines-iMac-2:pro ckurlawalla$ ls
+README.md	Untitled-1	ytcuj
+Christines-iMac-2:pro ckurlawalla$ cd ..
+Christines-iMac-2:Desktop ckurlawalla$ ls
+DigitalFilm		test
+pro			utftufugfuguygfuy
+Christines-iMac-2:Desktop ckurlawalla$ git clone https://github.com/joshkmartinez/test.git
+Cloning into 'test'...
+warning: You appear to have cloned an empty repository.
+Christines-iMac-2:Desktop ckurlawalla$ nano hvikvikvik.txt
+
+  GNU nano 2.0.6            File: hvikvikvik.txt                      Modified  
+
+mvjhvhv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  [ New File ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
